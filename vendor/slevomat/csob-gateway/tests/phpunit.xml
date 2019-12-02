@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<phpunit
+	bootstrap="bootstrap.php"
+	colors="true"
+	backupGlobals="false"
+	backupStaticAttributes="false"
+	beStrictAboutTestsThatDoNotTestAnything="true"
+	beStrictAboutCoversAnnotation="true"
+	beStrictAboutOutputDuringTests="true"
+	>
+	<logging>
+		<log
+			type="coverage-html"
+			target="../build/log/html"
+			lowUpperBound="0"
+			highLowerBound="99"
+		/>
+		<log
+			type="coverage-text"
+			target="php://stdout"
+			showUncoveredFiles="true"
+			showOnlySummary="true"
+		/>
+		<log type="coverage-clover" target="../build/log/clover.xml"/>
+	</logging>
+
+	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory suffix=".php">../src</directory>
+		</whitelist>
+	</filter>
+
+	<testsuites>
+		<testsuite name="Unit_Tests">
+			<directory>unit</directory>
+		</testsuite>
+	</testsuites>
+
+</phpunit>
