@@ -3,7 +3,10 @@
 # https://nette.org/security-warning
 #
 parameters:
-
+    privateKeyFile: ../app/keys/rsa_A4292qDdPE.key
+#    privateKeyFile: ../app/keys/certificate.pem
+#    bankPublicKeyFile: ../app/keys/public.pub
+    bankPublicKeyFile: ../app/keys/rsa_A4292qDdPE.pub
 
 application:
 	errorPresenter: Error
@@ -28,4 +31,5 @@ services:
 	- App\Forms\FormFactory
 	- App\Forms\SignInFormFactory
 	- App\Forms\SignUpFormFactory
+	- App\Presenters\HomepagePresenter(%privateKeyFile%, %bankPublicKeyFile%)
 	router: App\Router\RouterFactory::createRouter
