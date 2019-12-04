@@ -3,10 +3,9 @@
 # https://nette.org/security-warning
 #
 parameters:
-    privateKeyFile: ../app/keys/rsa_A4292qDdPE.key
-#    privateKeyFile: ../app/keys/certificate.pem
-#    bankPublicKeyFile: ../app/keys/public.pub
-    bankPublicKeyFile: ../app/keys/rsa_A4292qDdPE.pub
+    privateKeyFile: ../app/keys/rsa_A4304rTaSL.key
+#    privateKeyFile: ../app/keys/mips_iplatebnibrana.csob.cz.cer
+    bankPublicKeyFile: ../app/keys/rsa_A4304rTaSL.pub
 
 application:
 	errorPresenter: Error
